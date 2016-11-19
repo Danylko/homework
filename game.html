@@ -1,30 +1,22 @@
-<!DOCTYPE html>
 	<html>
 		<head>
 		</head>
 			<body>
-		<input>
-		</input>
-		<button>
-			OK
+		<input type="texr" id="number">
+		<button onclick="ok()">ok
 		</button>
 		<script>
-		if(input=secret){
-		console.log("win")
-		}
-		if(input<secret){
-		console.log("<")
-		}
-		if(input>secret){
-		console.log(">")
-		}
-		var secret=0;
-      min=1;
-      max=100;
-      secret=Math.random();
-      secret=secret*(max-min);
-      secret=Math.round(secret);
-      console.log(secret);
+			var secret=Math.round(Math.random()*100);
+			console.log(secret);
+		function ok(){
+			var number = document.getElementById("number").value;
+			console.log(number);
+			if(secret==number)
+				{alert("WIN")}
+			else if(secret<number)
+				{alert("<")}
+			else if(secret>number)
+				{alert(">")}}
 		</script>
 			</body>
 	</html>
